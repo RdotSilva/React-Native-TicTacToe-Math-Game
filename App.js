@@ -35,19 +35,37 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.tileContainer}>
-        <View style={[styles.tile, styles.topLeftTile]}></View>
-        <View style={[styles.tile, styles.topMidTile]}></View>
-        <View style={[styles.tile, styles.topRightTile]}></View>
+        <View style={[styles.tile, styles.topLeftTile]}>
+          {renderGameIcon(0, 0)}
+        </View>
+        <View style={[styles.tile, styles.topMidTile]}>
+          {renderGameIcon(0, 1)}
+        </View>
+        <View style={[styles.tile, styles.topRightTile]}>
+          {renderGameIcon(0, 2)}
+        </View>
       </View>
       <View style={styles.tileContainer}>
-        <View style={[styles.tile, styles.midLeftTile]}></View>
-        <View style={[styles.tile, styles.midMidTile]}></View>
-        <View style={[styles.tile, styles.midRightTile]}></View>
+        <View style={[styles.tile, styles.midLeftTile]}>
+          {renderGameIcon(1, 0)}
+        </View>
+        <View style={[styles.tile, styles.midMidTile]}>
+          {renderGameIcon(1, 1)}
+        </View>
+        <View style={[styles.tile, styles.midRightTile]}>
+          {renderGameIcon(1, 2)}
+        </View>
       </View>
       <View style={styles.tileContainer}>
-        <View style={[styles.tile, styles.bottomLeftTile]}></View>
-        <View style={[styles.tile, styles.bottomMidTile]}></View>
-        <View style={[styles.tile, styles.bottomRightTile]}></View>
+        <View style={[styles.tile, styles.bottomLeftTile]}>
+          {renderGameIcon(2, 0)}
+        </View>
+        <View style={[styles.tile, styles.bottomMidTile]}>
+          {renderGameIcon(2, 1)}
+        </View>
+        <View style={[styles.tile, styles.bottomRightTile]}>
+          {renderGameIcon(2, 2)}
+        </View>
       </View>
     </View>
   );
