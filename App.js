@@ -1,11 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.tileContainer}>
-        <View style={[styles.tile, styles.topLeftTile]}></View>
+        <View style={[styles.tile, styles.topLeftTile]}>
+          <Icon style={styles.xShape} name="close"></Icon>
+        </View>
         <View style={[styles.tile, styles.topMidTile]}></View>
         <View style={[styles.tile, styles.topRightTile]}></View>
       </View>
@@ -66,5 +69,12 @@ const styles = StyleSheet.create({
   bottomRightTile: {
     borderBottomWidth: 0,
     borderRightWidth: 0
+  },
+  xShape: {
+    color: "red",
+    fontSize: 60,
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
   }
 });
