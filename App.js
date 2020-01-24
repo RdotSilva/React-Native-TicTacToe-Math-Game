@@ -6,6 +6,14 @@ export default function App() {
   const [gameState, setGameState] = useState([]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
+  const initializeGame = () => {
+    setGameState([
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0]
+    ]);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.tileContainer}>
