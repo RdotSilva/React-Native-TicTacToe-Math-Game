@@ -14,6 +14,19 @@ export default function App() {
     ]);
   };
 
+  const renderGameIcon = (row, column) => {
+    let value = gameState[row][column];
+
+    switch (value) {
+      case 1:
+        return <Icon style={styles.xShape} name="close"></Icon>;
+      case -1:
+        return <Icon style={styles.oShape} name="circle-outline"></Icon>;
+      default:
+        return <View></View>;
+    }
+  };
+
   // Init game when component mounts
   useEffect(() => {
     initializeGame();
@@ -22,12 +35,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.tileContainer}>
-        <View style={[styles.tile, styles.topLeftTile]}>
-          <Icon style={styles.xShape} name="close"></Icon>
-        </View>
-        <View style={[styles.tile, styles.topMidTile]}>
-          <Icon style={styles.oShape} name="circle-outline"></Icon>
-        </View>
+        <View style={[styles.tile, styles.topLeftTile]}></View>
+        <View style={[styles.tile, styles.topMidTile]}></View>
         <View style={[styles.tile, styles.topRightTile]}></View>
       </View>
       <View style={styles.tileContainer}>
