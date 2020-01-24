@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.tile}> </View>
+      <View></View>
     </View>
   );
 }
@@ -20,5 +20,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: 100,
     height: 100
+  },
+  tileContainer: {
+    flexDirection: "row"
   }
 });
