@@ -10,9 +10,9 @@ export default function App() {
         <View style={[styles.tile, styles.topRightTile]}></View>
       </View>
       <View style={styles.tileContainer}>
-        <View style={styles.tile}></View>
-        <View style={styles.tile}></View>
-        <View style={styles.tile}></View>
+        <View style={[styles.tile, styles.midLeftTile]}></View>
+        <View style={[styles.tile, styles.midMidTile]}></View>
+        <View style={[styles.tile, styles.midRightTile]}></View>
       </View>
       <View style={styles.tileContainer}>
         <View style={styles.tile}></View>
@@ -47,6 +47,13 @@ const styles = StyleSheet.create({
   },
   topRightTile: {
     borderTopWidth: 0,
+    borderRightWidth: 0
+  },
+  midLeftTile: {
+    borderLeftWidth: 0
+  },
+  midMidTile: {},
+  midRightTile: {
     borderRightWidth: 0
   }
 });
