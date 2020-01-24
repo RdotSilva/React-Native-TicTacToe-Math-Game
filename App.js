@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
 
@@ -13,6 +13,11 @@ export default function App() {
       [0, 0, 0]
     ]);
   };
+
+  // Init game when component mounts
+  useEffect(() => {
+    initializeGame();
+  }, []);
 
   return (
     <View style={styles.container}>
