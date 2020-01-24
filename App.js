@@ -3,7 +3,11 @@ import { StyleSheet, Text, View } from "react-native";
 import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
 
 export default function App() {
-  const [gameState, setGameState] = useState([]);
+  const [gameState, setGameState] = useState([
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+  ]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
   const initializeGame = () => {
