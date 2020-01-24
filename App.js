@@ -9,7 +9,9 @@ export default function App() {
         <View style={[styles.tile, styles.topLeftTile]}>
           <Icon style={styles.xShape} name="close"></Icon>
         </View>
-        <View style={[styles.tile, styles.topMidTile]}></View>
+        <View style={[styles.tile, styles.topMidTile]}>
+          <Icon style={styles.oShape} name="circle-outline"></Icon>
+        </View>
         <View style={[styles.tile, styles.topRightTile]}></View>
       </View>
       <View style={styles.tileContainer}>
@@ -72,6 +74,13 @@ const styles = StyleSheet.create({
   },
   xShape: {
     color: "red",
+    fontSize: 60,
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  oShape: {
+    color: "green",
     fontSize: 60,
     flex: 1,
     alignItems: "center",
