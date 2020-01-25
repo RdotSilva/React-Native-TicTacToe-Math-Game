@@ -32,9 +32,7 @@ export default function App() {
       return <Text style={styles.questionText}>{randomQuestion.question}</Text>;
     } else {
       return Object.keys(randomQuestion.answers).map((keyName, i) => (
-        <Text style={styles.questionText}>
-          {randomQuestion.answers[keyName]}
-        </Text>
+        <Text style={styles.answerText}>{randomQuestion.answers[keyName]}</Text>
       ));
     }
   };
@@ -106,7 +104,9 @@ export default function App() {
         </View>
       </View>
       <View style={styles.answerContainer}>
-        {getRandomMathQuestion("answer")}
+        <View style={styles.singleAnswerContainer}>
+          {getRandomMathQuestion("answer")}
+        </View>
       </View>
     </View>
   );
@@ -184,9 +184,15 @@ const styles = StyleSheet.create({
   answerContainer: {
     fontSize: 60,
     backgroundColor: "tan",
-    alignSelf: "center"
+    alignSelf: "center",
+    borderColor: "purple",
+    borderWidth: 1
   },
   answerText: {
-    width: 50
+    fontSize: 60,
+    width: 200,
+    textAlign: "center",
+    borderWidth: 1,
+    margin: 5
   }
 });
