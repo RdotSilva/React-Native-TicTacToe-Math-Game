@@ -17,7 +17,7 @@ export default function App() {
         b: "5",
         c: "1"
       },
-      correctAnswer: "a"
+      correctAnswer: "2"
     }
   ]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
@@ -32,8 +32,31 @@ export default function App() {
       return <Text style={styles.questionText}>{randomQuestion.question}</Text>;
     } else {
       return Object.keys(randomQuestion.answers).map((keyName, i) => (
-        <Text style={styles.answerText}>{randomQuestion.answers[keyName]}</Text>
+        <Text
+          onPress={() =>
+            checkAnswer(randomQuestion, randomQuestion.answers[keyName])
+          }
+          style={styles.answerText}
+        >
+          {randomQuestion.answers[keyName]}
+        </Text>
       ));
+    }
+  };
+
+  const printValue = text => {
+    console.log(text);
+  };
+
+  // Check for the correct answer. Takes the current question and answer and compares them both.
+  // TODO: This will eventually set a flag to allow the player to pick a tile or to go onto the next player.
+  const checkAnswer = (question, answer) => {
+    let correctAnswer = question.correctAnswer;
+
+    if (correctAnswer === answer) {
+      console.log("CORRECT");
+    } else {
+      console.log("NOT CORRECT");
     }
   };
 
