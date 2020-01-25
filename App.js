@@ -10,13 +10,15 @@ export default function App() {
   ]);
 
   const [mathQuestions, setMathQuestions] = useState([
-    1 + 1,
-    4 + 3,
-    10 + 6,
-    22 + 11,
-    2 + 5,
-    8 + 10,
-    5 + 11
+    {
+      question: "1 + 1",
+      answers: {
+        a: "2",
+        b: "5",
+        c: "1"
+      },
+      correctAnswer: "a"
+    }
   ]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
@@ -48,9 +50,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.questionContainer}>
-        <Text style={styles.questionText}>1 + 1 = ?</Text>
-      </View>
+      <View style={styles.questionContainer}>{getRandomMathQuestion()}</View>
       <View>
         <View style={styles.tileContainer}>
           <View style={[styles.tile, styles.topLeftTile]}>
