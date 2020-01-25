@@ -8,6 +8,16 @@ export default function App() {
     [0, 0, 0],
     [0, 0, 0]
   ]);
+
+  const [mathQuestions, setMathQuestions] = useState([
+    1 + 1,
+    4 + 3,
+    10 + 6,
+    22 + 11,
+    2 + 5,
+    8 + 10,
+    5 + 11
+  ]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
   const initializeGame = () => {
