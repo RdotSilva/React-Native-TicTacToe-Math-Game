@@ -149,7 +149,11 @@ export default function App() {
       </View>
       <View style={styles.answerContainer}>
         <View style={styles.singleAnswerContainer}>
-          {/* {getRandomMathQuestion("answer")} */}
+          {currentQuestion === null ? (
+            <ActivityIndicator size="large" color="#0000ff" />
+          ) : (
+            getAnswersToQuestion(currentQuestion)
+          )}
         </View>
       </View>
     </View>
