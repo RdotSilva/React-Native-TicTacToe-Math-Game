@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TextInput } from "react-native";
 import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
 
 export default function App() {
@@ -38,38 +38,46 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.tileContainer}>
-        <View style={[styles.tile, styles.topLeftTile]}>
-          {renderGameIcon(0, 0)}
+      <View style={styles.questionContainer}>
+        <Text style={styles.questionText}>1 + 1 = ?</Text>
+      </View>
+      <View>
+        <View style={styles.tileContainer}>
+          <View style={[styles.tile, styles.topLeftTile]}>
+            {renderGameIcon(0, 0)}
+          </View>
+          <View style={[styles.tile, styles.topMidTile]}>
+            {renderGameIcon(0, 1)}
+          </View>
+          <View style={[styles.tile, styles.topRightTile]}>
+            {renderGameIcon(0, 2)}
+          </View>
         </View>
-        <View style={[styles.tile, styles.topMidTile]}>
-          {renderGameIcon(0, 1)}
+        <View style={styles.tileContainer}>
+          <View style={[styles.tile, styles.midLeftTile]}>
+            {renderGameIcon(1, 0)}
+          </View>
+          <View style={[styles.tile, styles.midMidTile]}>
+            {renderGameIcon(1, 1)}
+          </View>
+          <View style={[styles.tile, styles.midRightTile]}>
+            {renderGameIcon(1, 2)}
+          </View>
         </View>
-        <View style={[styles.tile, styles.topRightTile]}>
-          {renderGameIcon(0, 2)}
+        <View style={styles.tileContainer}>
+          <View style={[styles.tile, styles.bottomLeftTile]}>
+            {renderGameIcon(2, 0)}
+          </View>
+          <View style={[styles.tile, styles.bottomMidTile]}>
+            {renderGameIcon(2, 1)}
+          </View>
+          <View style={[styles.tile, styles.bottomRightTile]}>
+            {renderGameIcon(2, 2)}
+          </View>
         </View>
       </View>
-      <View style={styles.tileContainer}>
-        <View style={[styles.tile, styles.midLeftTile]}>
-          {renderGameIcon(1, 0)}
-        </View>
-        <View style={[styles.tile, styles.midMidTile]}>
-          {renderGameIcon(1, 1)}
-        </View>
-        <View style={[styles.tile, styles.midRightTile]}>
-          {renderGameIcon(1, 2)}
-        </View>
-      </View>
-      <View style={styles.tileContainer}>
-        <View style={[styles.tile, styles.bottomLeftTile]}>
-          {renderGameIcon(2, 0)}
-        </View>
-        <View style={[styles.tile, styles.bottomMidTile]}>
-          {renderGameIcon(2, 1)}
-        </View>
-        <View style={[styles.tile, styles.bottomRightTile]}>
-          {renderGameIcon(2, 2)}
-        </View>
+      <View>
+        <TextInput style={styles.answer}>Answer?</TextInput>
       </View>
     </View>
   );
@@ -78,9 +86,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: "#fff"
   },
   tile: {
     borderWidth: 1,
@@ -88,7 +94,9 @@ const styles = StyleSheet.create({
     height: 100
   },
   tileContainer: {
-    flexDirection: "row"
+    flexDirection: "row",
+    backgroundColor: "purple",
+    justifyContent: "center"
   },
   topLeftTile: {
     borderLeftWidth: 0,
