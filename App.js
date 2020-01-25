@@ -18,6 +18,15 @@ export default function App() {
         c: "1"
       },
       correctAnswer: "2"
+    },
+    {
+      question: "2 + 2",
+      answers: {
+        a: "5",
+        b: "8",
+        c: "4"
+      },
+      correctAnswer: "4"
     }
   ]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
