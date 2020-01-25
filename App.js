@@ -51,6 +51,20 @@ export default function App() {
     return <Text style={styles.questionText}>{randomQuestion.question}</Text>;
   };
 
+  const getAnswersToQuestion = question => {
+    let currentQuestion = question;
+    return Object.keys(currentQuestion.answers).map((keyName, i) => (
+      <Text
+        onPress={() =>
+          checkAnswer(currentQuestion, currentQuestion.answers[keyName])
+        }
+        style={styles.answerText}
+      >
+        {currentQuestion.answers[keyName]}
+      </Text>
+    ));
+  };
+
   // Check for the correct answer. Takes the current question and answer and compares them both.
   // TODO: This will eventually set a flag to allow the player to pick a tile or to go onto the next player.
   const checkAnswer = (question, answer) => {
