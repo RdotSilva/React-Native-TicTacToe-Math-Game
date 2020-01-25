@@ -8,6 +8,8 @@ import {
 } from "react-native";
 import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
 
+import shuffle from "./utils/shuffle";
+
 // Quiz questions imported from separate file to keep things clean.
 import questions from "./utils/questions";
 
@@ -37,7 +39,10 @@ export default function App() {
 
   const getAnswersToQuestion = question => {
     let currentQuestion = question;
-    return Object.keys(currentQuestion.answers).map((keyName, i) => (
+    let keyArray = Object.keys(currentQuestion.answers);
+    let shuffledArray = shuffle(keyArray);
+
+    return shuffledArray.map((keyName, i) => (
       <Text
         onPress={() =>
           checkAnswer(currentQuestion, currentQuestion.answers[keyName])
