@@ -86,12 +86,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
+    flexDirection: "column",
+    backgroundColor: "powderblue",
+    justifyContent: "space-around"
   },
   tile: {
     borderWidth: 1,
     width: 100,
-    height: 100
+    height: 100,
+    backgroundColor: "skyblue"
   },
   tileContainer: {
     flexDirection: "row",
@@ -147,5 +151,10 @@ const styles = StyleSheet.create({
   },
   questionText: {
     fontSize: 60
+  },
+  answer: {
+    fontSize: 60,
+    backgroundColor: "tan",
+    alignSelf: "center"
   }
 });
