@@ -144,5 +144,8 @@ const styles = StyleSheet.create({
   questionContainer: {
     backgroundColor: "beige",
     alignSelf: "center"
+  },
+  questionText: {
+    fontSize: 60
   }
 });
