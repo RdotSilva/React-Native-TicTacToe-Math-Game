@@ -105,7 +105,9 @@ export default function App() {
           </View>
         </View>
       </View>
-      <View>{getRandomMathQuestion("answer")}</View>
+      <View style={styles.answerContainer}>
+        {getRandomMathQuestion("answer")}
+      </View>
     </View>
   );
 }
@@ -179,9 +181,12 @@ const styles = StyleSheet.create({
   questionText: {
     fontSize: 60
   },
-  answer: {
+  answerContainer: {
     fontSize: 60,
     backgroundColor: "tan",
     alignSelf: "center"
+  },
+  answerText: {
+    width: 50
   }
 });
