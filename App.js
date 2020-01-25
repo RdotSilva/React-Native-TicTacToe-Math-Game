@@ -22,6 +22,13 @@ export default function App() {
   ]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
+  const getRandomMathQuestion = () => {
+    let randomQuestion =
+      mathQuestions[Math.floor(Math.random() * mathQuestions.length)].question;
+
+    return <Text style={styles.questionText}>{randomQuestion}</Text>;
+  };
+
   const initializeGame = () => {
     setGameState([
       [0, 0, 0],
