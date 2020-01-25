@@ -22,11 +22,21 @@ export default function App() {
   ]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
-  const getRandomMathQuestion = () => {
-    let randomQuestion =
-      mathQuestions[Math.floor(Math.random() * mathQuestions.length)].question;
+  const getRandomMathQuestion = questionOrAnswerFlag => {
+    let flag = questionOrAnswerFlag;
 
-    return <Text style={styles.questionText}>{randomQuestion}</Text>;
+    let randomQuestion =
+      mathQuestions[Math.floor(Math.random() * mathQuestions.length)];
+
+    if (flag === "question") {
+      return <Text style={styles.questionText}>{randomQuestion.question}</Text>;
+    } else {
+      return Object.keys(randomQuestion.answers).map((keyName, i) => (
+        <Text style={styles.questionText}>
+          {randomQuestion.answers[keyName]}
+        </Text>
+      ));
+    }
   };
 
   const initializeGame = () => {
@@ -57,7 +67,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.questionContainer}>{getRandomMathQuestion()}</View>
+      <View style={styles.questionContainer}>
+        {getRandomMathQuestion("question")}
+      </View>
       <View>
         <View style={styles.tileContainer}>
           <View style={[styles.tile, styles.topLeftTile]}>
@@ -93,9 +105,7 @@ export default function App() {
           </View>
         </View>
       </View>
-      <View>
-        <TextInput style={styles.answer}>Answer?</TextInput>
-      </View>
+      <View>{getRandomMathQuestion("answer")}</View>
     </View>
   );
 }
