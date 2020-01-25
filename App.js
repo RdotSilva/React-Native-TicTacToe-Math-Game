@@ -8,6 +8,9 @@ import {
 } from "react-native";
 import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
 
+// Quiz questions imported from separate file to keep things clean.
+import questions from "./utils/questions";
+
 export default function App() {
   const [gameState, setGameState] = useState([
     [0, 0, 0],
@@ -17,26 +20,7 @@ export default function App() {
 
   const [currentQuestion, setCurrentQuestion] = useState(null);
 
-  const [mathQuestions, setMathQuestions] = useState([
-    {
-      question: "1 + 1",
-      answers: {
-        a: "2",
-        b: "5",
-        c: "1"
-      },
-      correctAnswer: "2"
-    },
-    {
-      question: "2 + 2",
-      answers: {
-        a: "5",
-        b: "8",
-        c: "4"
-      },
-      correctAnswer: "4"
-    }
-  ]);
+  const [mathQuestions, setMathQuestions] = useState(questions);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
   const getRandomMathQuestion = () => {
