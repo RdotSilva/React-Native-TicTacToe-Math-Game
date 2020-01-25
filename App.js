@@ -46,8 +46,9 @@ export default function App() {
     setCurrentQuestion(randomQuestion);
   };
 
-  const printValue = text => {
-    console.log(text);
+  const renderQuestion = question => {
+    let randomQuestion = question;
+    return <Text style={styles.questionText}>{randomQuestion.question}</Text>;
   };
 
   // Check for the correct answer. Takes the current question and answer and compares them both.
