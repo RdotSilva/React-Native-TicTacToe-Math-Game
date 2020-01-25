@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, TextInput } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  ActivityIndicator
+} from "react-native";
 import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
 
 export default function App() {
@@ -8,6 +14,8 @@ export default function App() {
     [0, 0, 0],
     [0, 0, 0]
   ]);
+
+  const [currentQuestion, setCurrentQuestion] = useState(null);
 
   const [mathQuestions, setMathQuestions] = useState([
     {
@@ -31,26 +39,11 @@ export default function App() {
   ]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
-  const getRandomMathQuestion = questionOrAnswerFlag => {
-    let flag = questionOrAnswerFlag;
-
+  const getRandomMathQuestion = () => {
     let randomQuestion =
       mathQuestions[Math.floor(Math.random() * mathQuestions.length)];
 
-    if (flag === "question") {
-      return <Text style={styles.questionText}>{randomQuestion.question}</Text>;
-    } else {
-      return Object.keys(randomQuestion.answers).map((keyName, i) => (
-        <Text
-          onPress={() =>
-            checkAnswer(randomQuestion, randomQuestion.answers[keyName])
-          }
-          style={styles.answerText}
-        >
-          {randomQuestion.answers[keyName]}
-        </Text>
-      ));
-    }
+    setCurrentQuestion(randomQuestion);
   };
 
   const printValue = text => {
@@ -92,13 +85,17 @@ export default function App() {
 
   // Init game when component mounts
   useEffect(() => {
-    initializeGame();
+    initializeGame(), getRandomMathQuestion();
   }, []);
 
   return (
     <View style={styles.container}>
       <View style={styles.questionContainer}>
-        {getRandomMathQuestion("question")}
+        {currentQuestion === null ? (
+          <ActivityIndicator size="large" color="#0000ff" />
+        ) : (
+          renderQuestion(currentQuestion)
+        )}
       </View>
       <View>
         <View style={styles.tileContainer}>
@@ -137,7 +134,7 @@ export default function App() {
       </View>
       <View style={styles.answerContainer}>
         <View style={styles.singleAnswerContainer}>
-          {getRandomMathQuestion("answer")}
+          {/* {getRandomMathQuestion("answer")} */}
         </View>
       </View>
     </View>
