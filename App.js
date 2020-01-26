@@ -180,7 +180,9 @@ export default function App() {
         </View>
       </View>
       <View style={styles.playerDisplayContainer}>
-        <Text style={styles.playerTextDisplay}>Player Turn</Text>
+        <Text style={styles.playerTextDisplay}>
+          {currentPlayer === 1 ? "Player One" : "Player Two"}
+        </Text>
       </View>
       <View style={styles.answerContainer}>
         <View style={styles.singleAnswerContainer}>
