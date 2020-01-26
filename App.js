@@ -207,7 +207,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: 100,
     height: 100,
-    backgroundColor: "skyblue"
+    backgroundColor: "skyblue",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    paddingLeft: 18
   },
   tileContainer: {
     flexDirection: "row",
