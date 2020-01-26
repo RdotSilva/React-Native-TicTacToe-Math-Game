@@ -179,6 +179,9 @@ export default function App() {
           </TouchableOpacity>
         </View>
       </View>
+      <View style={styles.playerDisplayContainer}>
+        <Text>Player Turn</Text>
+      </View>
       <View style={styles.answerContainer}>
         <View style={styles.singleAnswerContainer}>
           {currentQuestion === null ? (
@@ -274,5 +277,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     borderWidth: 1,
     margin: 5
+  },
+  playerDisplayContainer: {
+    backgroundColor: "orange",
+    alignSelf: "center",
+    borderColor: "purple",
+    borderWidth: 1
   }
 });
