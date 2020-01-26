@@ -61,9 +61,9 @@ export default function App() {
     let correctAnswer = question.correctAnswer;
 
     if (correctAnswer === answer) {
-      console.log("CORRECT");
+      setPlayerTurnAllowed(true);
     } else {
-      console.log("NOT CORRECT");
+      setPlayerTurnAllowed(false);
     }
   };
 
