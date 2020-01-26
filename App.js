@@ -117,32 +117,56 @@ export default function App() {
           >
             {renderGameIcon(0, 0)}
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.tile, styles.topMidTile]}>
+          <TouchableOpacity
+            onPress={() => onTilePress(0, 1)}
+            style={[styles.tile, styles.topMidTile]}
+          >
             {renderGameIcon(0, 1)}
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.tile, styles.topRightTile]}>
+          <TouchableOpacity
+            onPress={() => onTilePress(0, 2)}
+            style={[styles.tile, styles.topRightTile]}
+          >
             {renderGameIcon(0, 2)}
           </TouchableOpacity>
         </View>
         <View style={styles.tileContainer}>
-          <TouchableOpacity style={[styles.tile, styles.midLeftTile]}>
+          <TouchableOpacity
+            onPress={() => onTilePress(1, 0)}
+            style={[styles.tile, styles.midLeftTile]}
+          >
             {renderGameIcon(1, 0)}
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.tile, styles.midMidTile]}>
+          <TouchableOpacity
+            onPress={() => onTilePress(1, 1)}
+            style={[styles.tile, styles.midMidTile]}
+          >
             {renderGameIcon(1, 1)}
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.tile, styles.midRightTile]}>
+          <TouchableOpacity
+            onPress={() => onTilePress(1, 2)}
+            style={[styles.tile, styles.midRightTile]}
+          >
             {renderGameIcon(1, 2)}
           </TouchableOpacity>
         </View>
         <View style={styles.tileContainer}>
-          <TouchableOpacity style={[styles.tile, styles.bottomLeftTile]}>
+          <TouchableOpacity
+            onPress={() => onTilePress(2, 0)}
+            style={[styles.tile, styles.bottomLeftTile]}
+          >
             {renderGameIcon(2, 0)}
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.tile, styles.bottomMidTile]}>
+          <TouchableOpacity
+            onPress={() => onTilePress(2, 1)}
+            style={[styles.tile, styles.bottomMidTile]}
+          >
             {renderGameIcon(2, 1)}
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.tile, styles.bottomRightTile]}>
+          <TouchableOpacity
+            onPress={() => onTilePress(2, 2)}
+            style={[styles.tile, styles.bottomRightTile]}
+          >
             {renderGameIcon(2, 2)}
           </TouchableOpacity>
         </View>
