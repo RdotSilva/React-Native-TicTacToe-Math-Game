@@ -3,8 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
-  TextInput,
-  ActivityIndicator
+  ActivityIndicator,
+  TouchableOpacity
 } from "react-native";
 import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
 
@@ -103,37 +103,37 @@ export default function App() {
       </View>
       <View>
         <View style={styles.tileContainer}>
-          <View style={[styles.tile, styles.topLeftTile]}>
+          <TouchableOpacity style={[styles.tile, styles.topLeftTile]}>
             {renderGameIcon(0, 0)}
-          </View>
-          <View style={[styles.tile, styles.topMidTile]}>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.tile, styles.topMidTile]}>
             {renderGameIcon(0, 1)}
-          </View>
-          <View style={[styles.tile, styles.topRightTile]}>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.tile, styles.topRightTile]}>
             {renderGameIcon(0, 2)}
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.tileContainer}>
-          <View style={[styles.tile, styles.midLeftTile]}>
+          <TouchableOpacity style={[styles.tile, styles.midLeftTile]}>
             {renderGameIcon(1, 0)}
-          </View>
-          <View style={[styles.tile, styles.midMidTile]}>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.tile, styles.midMidTile]}>
             {renderGameIcon(1, 1)}
-          </View>
-          <View style={[styles.tile, styles.midRightTile]}>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.tile, styles.midRightTile]}>
             {renderGameIcon(1, 2)}
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.tileContainer}>
-          <View style={[styles.tile, styles.bottomLeftTile]}>
+          <TouchableOpacity style={[styles.tile, styles.bottomLeftTile]}>
             {renderGameIcon(2, 0)}
-          </View>
-          <View style={[styles.tile, styles.bottomMidTile]}>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.tile, styles.bottomMidTile]}>
             {renderGameIcon(2, 1)}
-          </View>
-          <View style={[styles.tile, styles.bottomRightTile]}>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.tile, styles.bottomRightTile]}>
             {renderGameIcon(2, 2)}
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.answerContainer}>
