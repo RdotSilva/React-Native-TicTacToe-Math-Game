@@ -93,10 +93,14 @@ export default function App() {
 
   // Handles the logic when a user presses a tile
   const onTilePress = (row, column) => {
-    // Copy game array.
-    let arr = gameState.slice();
-    arr[row][column] = currentPlayer;
-    setGameState(arr);
+    if (playerTurnAllowed) {
+      // Copy game array.
+      let arr = gameState.slice();
+      arr[row][column] = currentPlayer;
+      setGameState(arr);
+      setPlayerTurnAllowed(false);
+      setCurrentPlayer(currentPlayer === 1 ? -1 : 1);
+    }
   };
 
   // Init game when component mounts
