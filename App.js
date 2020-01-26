@@ -66,6 +66,7 @@ export default function App() {
     } else {
       setPlayerTurnAllowed(false);
       setCurrentPlayer(currentPlayer === 1 ? -1 : 1);
+      getRandomMathQuestion();
       console.log(`Incorrect! ${currentPlayer}'s turn`);
     }
   };
@@ -100,6 +101,7 @@ export default function App() {
       setGameState(arr);
       setPlayerTurnAllowed(false);
       setCurrentPlayer(currentPlayer === 1 ? -1 : 1);
+      getRandomMathQuestion();
     }
   };
 
