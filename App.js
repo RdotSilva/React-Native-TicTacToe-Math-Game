@@ -24,6 +24,7 @@ export default function App() {
 
   const [mathQuestions, setMathQuestions] = useState(questions);
   const [currentPlayer, setCurrentPlayer] = useState(1);
+  const [playerTurnAllowed, setPlayerTurnAllowed] = useState(false);
 
   const getRandomMathQuestion = () => {
     let randomQuestion =
