@@ -62,8 +62,11 @@ export default function App() {
 
     if (correctAnswer === answer) {
       setPlayerTurnAllowed(true);
+      console.log(`Correct! ${currentPlayer}'s turn`);
     } else {
       setPlayerTurnAllowed(false);
+      setCurrentPlayer(currentPlayer === 1 ? -1 : 1);
+      console.log(`Incorrect! ${currentPlayer}'s turn`);
     }
   };
 
