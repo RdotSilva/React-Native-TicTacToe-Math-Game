@@ -180,7 +180,7 @@ export default function App() {
         </View>
       </View>
       <View style={styles.playerDisplayContainer}>
-        <Text>Player Turn</Text>
+        <Text style={styles.playerTextDisplay}>Player Turn</Text>
       </View>
       <View style={styles.answerContainer}>
         <View style={styles.singleAnswerContainer}>
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     flexDirection: "column",
     backgroundColor: "powderblue",
-    justifyContent: "space-around"
+    justifyContent: "space-evenly"
   },
   tile: {
     borderWidth: 1,
@@ -283,5 +283,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     borderColor: "purple",
     borderWidth: 1
+  },
+  playerTextDisplay: {
+    fontSize: 60
   }
 });
