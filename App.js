@@ -89,12 +89,10 @@ export default function App() {
 
   // Handles the logic when a user presses a tile
   const onTilePress = (row, column) => {
-    let currentPlayer = currentPlayer;
-
     // Copy game array.
     let arr = gameState.slice();
     arr[row][column] = currentPlayer;
-    useState({ gameState: arr });
+    setGameState(arr);
   };
 
   // Init game when component mounts
@@ -113,7 +111,10 @@ export default function App() {
       </View>
       <View>
         <View style={styles.tileContainer}>
-          <TouchableOpacity style={[styles.tile, styles.topLeftTile]}>
+          <TouchableOpacity
+            onPress={() => onTilePress(0, 0)}
+            style={[styles.tile, styles.topLeftTile]}
+          >
             {renderGameIcon(0, 0)}
           </TouchableOpacity>
           <TouchableOpacity style={[styles.tile, styles.topMidTile]}>
