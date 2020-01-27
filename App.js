@@ -4,7 +4,8 @@ import {
   Text,
   View,
   ActivityIndicator,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from "react-native";
 import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
 
@@ -41,6 +42,7 @@ export default function App() {
         return -1;
       }
     }
+
     // Check columns.
     for (let i = 0; i < TILES_IN_ROW; i++) {
       sum = gameState[0][i] + gameState[1][i] + gameState[2][i];
@@ -50,6 +52,7 @@ export default function App() {
         return -1;
       }
     }
+
     // Check diagonals
     sum = gameState[0][0] + gameState[1][1] + gameState[2][2];
     if (sum === 3) {
@@ -148,6 +151,15 @@ export default function App() {
       setPlayerTurnAllowed(false);
       setCurrentPlayer(currentPlayer === 1 ? -1 : 1);
       getRandomMathQuestion();
+      let winner = checkForWinner();
+
+      if (winner === 1) {
+        Alert.alert("Player 1 wins!");
+        initializeGame();
+      } else if (winner === -1) {
+        Alert.alert("Player 2 wins!");
+        initializeGame();
+      }
     }
   };
 
