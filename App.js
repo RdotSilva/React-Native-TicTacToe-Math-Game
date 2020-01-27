@@ -41,6 +41,15 @@ export default function App() {
         return -1;
       }
     }
+    // Check columns.
+    for (let i = 0; i < TILES_IN_ROW; i++) {
+      sum = gameState[0][i] + gameState[1][i] + gameState[2][i];
+      if (sum === 3) {
+        return 1;
+      } else if (sum === -3) {
+        return -1;
+      }
+    }
   };
 
   const getRandomMathQuestion = () => {
