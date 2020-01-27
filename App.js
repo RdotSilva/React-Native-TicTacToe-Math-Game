@@ -26,6 +26,23 @@ export default function App() {
   const [currentPlayer, setCurrentPlayer] = useState(1);
   const [playerTurnAllowed, setPlayerTurnAllowed] = useState(false);
 
+  // Check board for a winner. Return 1 if Player 1 wins, -1 if Player 2 wins, 0 if tie.
+  const checkForWinner = () => {
+    const TILES_IN_ROW = 3;
+
+    let sum;
+
+    // Check rows.
+    for (let i = 0; i < TILES_IN_ROW; i++) {
+      sum = gameState[i][0] + gameState[i][1] + gameState[i][2];
+      if (sum === 3) {
+        return 1;
+      } else if (sum === -3) {
+        return -1;
+      }
+    }
+  };
+
   const getRandomMathQuestion = () => {
     let randomQuestion =
       mathQuestions[Math.floor(Math.random() * mathQuestions.length)];
