@@ -80,6 +80,7 @@ export default function App() {
     ]);
   };
 
+  // Render X or O icon based on 2d array.
   const renderGameIcon = (row, column) => {
     let value = gameState[row][column];
 
