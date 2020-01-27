@@ -45,6 +45,7 @@ export default function App() {
 
     return shuffledArray.map((keyName, i) => (
       <Text
+        key={i}
         onPress={() =>
           checkAnswer(currentQuestion, currentQuestion.answers[keyName])
         }
