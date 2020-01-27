@@ -79,6 +79,24 @@ const questions = [
       c: "19"
     },
     correctAnswer: "18"
+  },
+  {
+    question: "1 + 2",
+    answers: {
+      a: "2",
+      b: "3",
+      c: "1"
+    },
+    correctAnswer: "3"
+  },
+  {
+    question: "1 + 3",
+    answers: {
+      a: "4",
+      b: "3",
+      c: "2"
+    },
+    correctAnswer: "4"
   }
 ];
 
