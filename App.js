@@ -50,6 +50,24 @@ export default function App() {
         return -1;
       }
     }
+    // Check diagonals
+    sum = gameState[0][0] + gameState[1][1] + gameState[2][2];
+    if (sum === 3) {
+      return 1;
+    } else if (sum === -3) {
+      return -1;
+    }
+
+    // Check diagonals
+    sum = gameState[2][0] + gameState[1][1] + gameState[0][2];
+    if (sum === 3) {
+      return 1;
+    } else if (sum === -3) {
+      return -1;
+    }
+
+    // No winners return a zero for tie.
+    return 0;
   };
 
   const getRandomMathQuestion = () => {
