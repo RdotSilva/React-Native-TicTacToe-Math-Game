@@ -277,7 +277,6 @@ const styles = StyleSheet.create({
   },
   tileContainer: {
     flexDirection: "row",
-    backgroundColor: "purple",
     justifyContent: "center"
   },
   topLeftTile: {
@@ -324,7 +323,6 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   questionContainer: {
-    backgroundColor: "beige",
     alignSelf: "center"
   },
   questionText: {
@@ -351,6 +349,8 @@ const styles = StyleSheet.create({
     borderRadius: 25
   },
   playerTextDisplay: {
-    fontSize: 60
+    fontSize: 60,
+    color: "#06070B",
+    margin: 10
   }
 });
