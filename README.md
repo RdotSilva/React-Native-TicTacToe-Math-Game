@@ -50,8 +50,8 @@ expo start --android
 
 ## Screenshots
 
-![Tic Tac Toe Math Game](https://i.imgur.com/FN3BWCF.jpg "Tic Tac Toe Math Game")
-![Tic Tac Toe Math Game](https://i.imgur.com/G3dbPxd.jpg "Tic Tac Toe Math Game")
+![Tic Tac Toe Math Game](https://i.imgur.com/aOdVwlm.png "Tic Tac Toe Math Game")
+![Tic Tac Toe Math Game](https://i.imgur.com/kUST7vp.png "Tic Tac Toe Math Game")
 
 ## License
 
