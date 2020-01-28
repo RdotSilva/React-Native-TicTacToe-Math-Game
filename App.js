@@ -262,14 +262,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     flexDirection: "column",
-    backgroundColor: "powderblue",
+    backgroundColor: "#7394B3",
     justifyContent: "space-evenly"
   },
   tile: {
-    borderWidth: 1,
+    borderWidth: 3,
     width: 100,
     height: 100,
-    backgroundColor: "skyblue",
+
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
