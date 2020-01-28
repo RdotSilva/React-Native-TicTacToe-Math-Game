@@ -146,12 +146,17 @@ export default function App() {
   const onTilePress = (row, column) => {
     if (playerTurnAllowed) {
       // Copy game array.
+
       let arr = gameState.slice();
       arr[row][column] = currentPlayer;
+
       setGameState(arr);
       setPlayerTurnAllowed(false);
       setCurrentPlayer(currentPlayer === 1 ? -1 : 1);
       getRandomMathQuestion();
+      checkForGameOver();
+
+      // Handles the alert for player win.
       let winner = checkForWinner();
 
       if (winner === 1) {
@@ -161,6 +166,25 @@ export default function App() {
         Alert.alert("Player 2 wins!");
         initializeGame();
       }
+    }
+  };
+
+  const checkForGameOver = () => {
+    let arr = gameState;
+    let numberOfPlays = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+        // If you find any zeros that means game is NOT over
+        if (arr[i][j] !== 0) {
+          numberOfPlays++;
+        }
+      }
+    }
+
+    if (numberOfPlays === 9) {
+      setGameOver(true);
+      initializeGame();
     }
   };
 
