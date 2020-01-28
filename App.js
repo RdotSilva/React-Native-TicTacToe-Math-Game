@@ -22,7 +22,6 @@ export default function App() {
   ]);
 
   const [currentQuestion, setCurrentQuestion] = useState(null);
-
   const [mathQuestions, setMathQuestions] = useState(questions);
   const [currentPlayer, setCurrentPlayer] = useState(1);
   const [playerTurnAllowed, setPlayerTurnAllowed] = useState(false);
@@ -31,7 +30,6 @@ export default function App() {
   // Check board for a winner. Return 1 if Player 1 wins, -1 if Player 2 wins, 0 if tie.
   const checkForWinner = () => {
     const TILES_IN_ROW = 3;
-
     let sum;
 
     // Check rows.
@@ -74,6 +72,7 @@ export default function App() {
     return 0;
   };
 
+  // Generate a random math questions.
   const getRandomMathQuestion = () => {
     let randomQuestion =
       mathQuestions[Math.floor(Math.random() * mathQuestions.length)];
@@ -81,11 +80,13 @@ export default function App() {
     setCurrentQuestion(randomQuestion);
   };
 
+  // Render the question Text component.
   const renderQuestion = question => {
     let randomQuestion = question;
     return <Text style={styles.questionText}>{randomQuestion.question}</Text>;
   };
 
+  // Get the answers from the answer key and shuffle before rendering.
   const getAnswersToQuestion = question => {
     let currentQuestion = question;
     let keyArray = Object.keys(currentQuestion.answers);
@@ -105,7 +106,6 @@ export default function App() {
   };
 
   // Check for the correct answer. Takes the current question and answer and compares them both.
-  // TODO: This will eventually set a flag to allow the player to pick a tile or to go onto the next player.
   const checkAnswer = (question, answer) => {
     let correctAnswer = question.correctAnswer;
 
@@ -169,6 +169,7 @@ export default function App() {
     }
   };
 
+  // Check values inside of gameState array to see if the game is over (end in tie)
   const checkForGameOver = () => {
     let arr = gameState;
     let numberOfPlays = 0;
