@@ -97,6 +97,78 @@ const questions = [
       c: "2"
     },
     correctAnswer: "4"
+  },
+  {
+    question: "1 + 4",
+    answers: {
+      a: "5",
+      b: "3",
+      c: "4"
+    },
+    correctAnswer: "5"
+  },
+  {
+    question: "1 + 5",
+    answers: {
+      a: "6",
+      b: "4",
+      c: "5"
+    },
+    correctAnswer: "6"
+  },
+  {
+    question: "1 + 6",
+    answers: {
+      a: "7",
+      b: "6",
+      c: "5"
+    },
+    correctAnswer: "7"
+  },
+  {
+    question: "1 + 7",
+    answers: {
+      a: "7",
+      b: "8",
+      c: "6"
+    },
+    correctAnswer: "8"
+  },
+  {
+    question: "1 + 8",
+    answers: {
+      a: "9",
+      b: "7",
+      c: "8"
+    },
+    correctAnswer: "9"
+  },
+  {
+    question: "1 + 9",
+    answers: {
+      a: "10",
+      b: "9",
+      c: "8"
+    },
+    correctAnswer: "10"
+  },
+  {
+    question: "2 + 1",
+    answers: {
+      a: "3",
+      b: "1",
+      c: "2"
+    },
+    correctAnswer: "3"
+  },
+  {
+    question: "2 + 2",
+    answers: {
+      a: "4",
+      b: "3",
+      c: "1"
+    },
+    correctAnswer: "4"
   }
 ];
 
