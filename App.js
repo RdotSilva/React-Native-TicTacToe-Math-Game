@@ -345,10 +345,10 @@ const styles = StyleSheet.create({
     margin: 5
   },
   playerDisplayContainer: {
-    backgroundColor: "orange",
+    backgroundColor: "#E29DA0",
     alignSelf: "center",
-    borderColor: "purple",
-    borderWidth: 1
+    borderWidth: 0.5,
+    borderRadius: 25
   },
   playerTextDisplay: {
     fontSize: 60
