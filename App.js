@@ -111,12 +111,10 @@ export default function App() {
 
     if (correctAnswer === answer) {
       setPlayerTurnAllowed(true);
-      console.log(`Correct! ${currentPlayer}'s turn`);
     } else {
       setPlayerTurnAllowed(false);
       setCurrentPlayer(currentPlayer === 1 ? -1 : 1);
       getRandomMathQuestion();
-      console.log(`Incorrect! ${currentPlayer}'s turn`);
     }
   };
 
@@ -126,6 +124,7 @@ export default function App() {
       [0, 0, 0],
       [0, 0, 0]
     ]);
+    setGameOver(false);
   };
 
   // Render X or O icon based on 2d array.
