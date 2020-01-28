@@ -2,6 +2,8 @@
 
 This is a fun and educational React Native mobile game that combines mathematics with the classic game of Tic Tac Toe. The first player is asked a math question. If they answer correctly they get to pick a spot on the game board. If they answer incorrectly, they lose a turn and the next player has a chance to answer a question and earn a spot on the board.
 
+Live Demo Hosted using Expo Snack: [Snack Demo](https://snack.expo.io/@rdotsilva/tictactoemath "Snack Demo")
+
 ### Prerequisites
 
 You must first install Expo.
@@ -48,7 +50,8 @@ expo start --android
 
 ## Screenshots
 
-![Coming Soon](https://upload.wikimedia.org/wikipedia/commons/8/80/Comingsoon.png "Coming Soon")
+![Tic Tac Toe Math Game](https://i.imgur.com/FN3BWCF.jpg "Tic Tac Toe Math Game")
+![Tic Tac Toe Math Game](https://i.imgur.com/G3dbPxd.jpg "Tic Tac Toe Math Game")
 
 ## License
 
