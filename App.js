@@ -333,7 +333,8 @@ const styles = StyleSheet.create({
     backgroundColor: "tan",
     alignSelf: "center",
     borderColor: "purple",
-    borderWidth: 1
+    borderWidth: 1,
+    borderRadius: 10
   },
   answerText: {
     fontSize: 60,
