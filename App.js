@@ -26,6 +26,7 @@ export default function App() {
   const [mathQuestions, setMathQuestions] = useState(questions);
   const [currentPlayer, setCurrentPlayer] = useState(1);
   const [playerTurnAllowed, setPlayerTurnAllowed] = useState(false);
+  const [gameOver, setGameOver] = useState(false);
 
   // Check board for a winner. Return 1 if Player 1 wins, -1 if Player 2 wins, 0 if tie.
   const checkForWinner = () => {
