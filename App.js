@@ -262,21 +262,22 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     flexDirection: "column",
-    backgroundColor: "#7394B3",
+    backgroundColor: "#9BB2C9",
     justifyContent: "space-evenly"
   },
   tile: {
     borderWidth: 3,
     width: 100,
     height: 100,
-
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    paddingLeft: 18
+    paddingLeft: 18,
+    borderColor: "#555760"
   },
   tileContainer: {
     flexDirection: "row",
+
     justifyContent: "center"
   },
   topLeftTile: {
@@ -309,14 +310,14 @@ const styles = StyleSheet.create({
     borderRightWidth: 0
   },
   xShape: {
-    color: "red",
+    color: "#977482",
     fontSize: 60,
     flex: 1,
     alignItems: "center",
     justifyContent: "center"
   },
   oShape: {
-    color: "green",
+    color: "#5A8C75",
     fontSize: 60,
     flex: 1,
     alignItems: "center",
@@ -326,13 +327,13 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   questionText: {
-    fontSize: 60
+    fontSize: 60,
+    color: "#555760"
   },
   answerContainer: {
     fontSize: 60,
-    backgroundColor: "tan",
+    backgroundColor: "#8B8C8A",
     alignSelf: "center",
-    borderColor: "purple",
     borderWidth: 1,
     borderRadius: 10
   },
@@ -341,7 +342,10 @@ const styles = StyleSheet.create({
     width: 200,
     textAlign: "center",
     borderWidth: 1,
-    margin: 5
+    margin: 5,
+    borderRadius: 10,
+    backgroundColor: "#F8EB8C",
+    overflow: "hidden"
   },
   playerDisplayContainer: {
     backgroundColor: "#E29DA0",
