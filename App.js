@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     flexDirection: "column",
-    backgroundColor: "#9BB2C9",
+    backgroundColor: "#C8D5E1",
     justifyContent: "space-evenly"
   },
   tile: {
@@ -335,14 +335,14 @@ const styles = StyleSheet.create({
     borderRightWidth: 0
   },
   xShape: {
-    color: "#977482",
+    color: "#DE1A1A",
     fontSize: 60,
     flex: 1,
     alignItems: "center",
     justifyContent: "center"
   },
   oShape: {
-    color: "#5A8C75",
+    color: "#35CE8D",
     fontSize: 60,
     flex: 1,
     alignItems: "center",
