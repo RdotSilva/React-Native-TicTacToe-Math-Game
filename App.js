@@ -371,8 +371,8 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   questionText: {
-    fontSize: 60,
-    color: "#555760"
+    fontSize: 100,
+    color: "#BE5438"
   },
   answerContainer: {
     fontSize: 60,
