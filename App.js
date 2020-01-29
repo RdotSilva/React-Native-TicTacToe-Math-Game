@@ -83,7 +83,16 @@ export default function App() {
   // Render the question Text component.
   const renderQuestion = question => {
     let randomQuestion = question;
-    return <Text style={styles.questionText}>{randomQuestion.question}</Text>;
+    return (
+      <Text
+        style={[
+          styles.questionText,
+          currentPlayer === 1 ? { color: "#DE1A1A" } : { color: "#35CE8D" }
+        ]}
+      >
+        {randomQuestion.question}
+      </Text>
+    );
   };
 
   // Get the answers from the answer key and shuffle before rendering.
@@ -371,8 +380,7 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   questionText: {
-    fontSize: 100,
-    color: "#BE5438"
+    fontSize: 100
   },
   answerContainer: {
     fontSize: 60,
