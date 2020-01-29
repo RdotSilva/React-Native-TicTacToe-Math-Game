@@ -188,6 +188,20 @@ export default function App() {
     }
   };
 
+  const renderCorrectText = () => {
+    if (playerTurnAllowed) {
+      if (currentPlayer === 1) {
+        return "X correct!";
+      } else {
+        return "O correct!";
+      }
+    } else if (currentPlayer === 1) {
+      return "Player X";
+    } else if (currentPlayer === -1) {
+      return "Player O";
+    }
+  };
+
   // Init game when component mounts
   useEffect(() => {
     initializeGame(), getRandomMathQuestion();
@@ -272,9 +286,7 @@ export default function App() {
             : { backgroundColor: "#E29DA0" }
         ]}
       >
-        <Text style={styles.playerTextDisplay}>
-          {currentPlayer === 1 ? "Player One" : "Player Two"}
-        </Text>
+        <Text style={styles.playerTextDisplay}>{renderCorrectText()}</Text>
       </View>
       <View style={styles.answerContainer}>
         <View style={styles.singleAnswerContainer}>
