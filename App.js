@@ -211,6 +211,20 @@ export default function App() {
     }
   };
 
+  const getPlayerDisplayStyle = () => {
+    if (playerTurnAllowed) {
+      if (currentPlayer === 1) {
+        return { backgroundColor: "#DE1A1A" };
+      } else {
+        return { backgroundColor: "#35CE8D" };
+      }
+    } else if (currentPlayer === 1) {
+      return { backgroundColor: "#DE1A1A" };
+    } else if (currentPlayer === -1) {
+      return { backgroundColor: "#35CE8D" };
+    }
+  };
+
   // Init game when component mounts
   useEffect(() => {
     initializeGame(), getRandomMathQuestion();
@@ -287,14 +301,7 @@ export default function App() {
           </TouchableOpacity>
         </View>
       </View>
-      <View
-        style={[
-          styles.playerDisplayContainer,
-          playerTurnAllowed
-            ? { backgroundColor: "#9EE37D" }
-            : { backgroundColor: "#E29DA0" }
-        ]}
-      >
+      <View style={[styles.playerDisplayContainer, getPlayerDisplayStyle()]}>
         <Text style={styles.playerTextDisplay}>{renderCorrectText()}</Text>
       </View>
       <View style={styles.answerContainer}>
@@ -400,7 +407,6 @@ const styles = StyleSheet.create({
     overflow: "hidden"
   },
   playerDisplayContainer: {
-    backgroundColor: "#E29DA0",
     alignSelf: "center",
     borderWidth: 0.5,
     borderRadius: 25
