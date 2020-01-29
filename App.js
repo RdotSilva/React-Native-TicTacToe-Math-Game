@@ -264,7 +264,14 @@ export default function App() {
           </TouchableOpacity>
         </View>
       </View>
-      <View style={styles.playerDisplayContainer}>
+      <View
+        style={[
+          styles.playerDisplayContainer,
+          playerTurnAllowed
+            ? { backgroundColor: "#9EE37D" }
+            : { backgroundColor: "#E29DA0" }
+        ]}
+      >
         <Text style={styles.playerTextDisplay}>
           {currentPlayer === 1 ? "Player One" : "Player Two"}
         </Text>
