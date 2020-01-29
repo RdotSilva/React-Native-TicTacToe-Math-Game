@@ -197,6 +197,7 @@ export default function App() {
     }
   };
 
+  // Renders the correct player text depending on whos turn it is.
   const renderCorrectText = () => {
     if (playerTurnAllowed) {
       if (currentPlayer === 1) {
@@ -211,14 +212,9 @@ export default function App() {
     }
   };
 
+  // Determines the player display box background color based on whos turn it is.
   const getPlayerDisplayStyle = () => {
-    if (playerTurnAllowed) {
-      if (currentPlayer === 1) {
-        return { backgroundColor: "#DE1A1A" };
-      } else {
-        return { backgroundColor: "#35CE8D" };
-      }
-    } else if (currentPlayer === 1) {
+    if (currentPlayer === 1) {
       return { backgroundColor: "#DE1A1A" };
     } else if (currentPlayer === -1) {
       return { backgroundColor: "#35CE8D" };
