@@ -250,18 +250,21 @@ export default function App() {
       <View>
         <View style={styles.tileContainer}>
           <TouchableOpacity
+            delayPressIn={300}
             onPress={() => onTilePress(0, 0)}
             style={[styles.tile, styles.topLeftTile]}
           >
             {renderGameIcon(0, 0)}
           </TouchableOpacity>
           <TouchableOpacity
+            delayPressIn={300}
             onPress={() => onTilePress(0, 1)}
             style={[styles.tile, styles.topMidTile]}
           >
             {renderGameIcon(0, 1)}
           </TouchableOpacity>
           <TouchableOpacity
+            delayPressIn={300}
             onPress={() => onTilePress(0, 2)}
             style={[styles.tile, styles.topRightTile]}
           >
@@ -270,18 +273,21 @@ export default function App() {
         </View>
         <View style={styles.tileContainer}>
           <TouchableOpacity
+            delayPressIn={300}
             onPress={() => onTilePress(1, 0)}
             style={[styles.tile, styles.midLeftTile]}
           >
             {renderGameIcon(1, 0)}
           </TouchableOpacity>
           <TouchableOpacity
+            delayPressIn={300}
             onPress={() => onTilePress(1, 1)}
             style={[styles.tile, styles.midMidTile]}
           >
             {renderGameIcon(1, 1)}
           </TouchableOpacity>
           <TouchableOpacity
+            delayPressIn={300}
             onPress={() => onTilePress(1, 2)}
             style={[styles.tile, styles.midRightTile]}
           >
@@ -290,18 +296,21 @@ export default function App() {
         </View>
         <View style={styles.tileContainer}>
           <TouchableOpacity
+            delayPressIn={300}
             onPress={() => onTilePress(2, 0)}
             style={[styles.tile, styles.bottomLeftTile]}
           >
             {renderGameIcon(2, 0)}
           </TouchableOpacity>
           <TouchableOpacity
+            delayPressIn={300}
             onPress={() => onTilePress(2, 1)}
             style={[styles.tile, styles.bottomMidTile]}
           >
             {renderGameIcon(2, 1)}
           </TouchableOpacity>
           <TouchableOpacity
+            delayPressIn={300}
             onPress={() => onTilePress(2, 2)}
             style={[styles.tile, styles.bottomRightTile]}
           >
