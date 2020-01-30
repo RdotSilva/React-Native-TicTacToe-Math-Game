@@ -216,11 +216,7 @@ export default function App() {
   // Renders the correct player text depending on whos turn it is.
   const renderCorrectText = () => {
     if (playerTurnAllowed) {
-      if (currentPlayer === 1) {
-        return "X correct!";
-      } else {
-        return "O correct!";
-      }
+      return "Correct!";
     } else if (currentPlayer === 1) {
       return "Player X";
     } else if (currentPlayer === -1) {
