@@ -101,6 +101,18 @@ export default function App() {
     let keyArray = Object.keys(currentQuestion.answers);
     let shuffledArray = shuffle(keyArray);
 
+    if (playerTurnAllowed) {
+      return (
+        <View>
+          <Text style={styles.answerText}>Player</Text>
+          <Text style={styles.answerText}>
+            {currentPlayer === 1 ? "X" : "O"}
+          </Text>
+          <Text style={styles.answerText}>Picks</Text>
+        </View>
+      );
+    }
+
     return shuffledArray.map((keyName, i) => (
       <Text
         key={i}
