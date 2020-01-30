@@ -104,11 +104,15 @@ export default function App() {
     if (playerTurnAllowed) {
       return (
         <View>
-          <Text style={styles.answerText}>Player</Text>
-          <Text style={styles.answerText}>
+          <Text style={[styles.answerText, getPlayerDisplayStyle()]}>
+            Player
+          </Text>
+          <Text style={[styles.answerText, getPlayerDisplayStyle()]}>
             {currentPlayer === 1 ? "X" : "O"}
           </Text>
-          <Text style={styles.answerText}>Picks</Text>
+          <Text style={[styles.answerText, getPlayerDisplayStyle()]}>
+            Picks
+          </Text>
         </View>
       );
     }
